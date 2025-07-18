@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Gemini AI Chatbot</h1>
+            <p>Your intelligent conversation partner</p>
+        </div>
+                
+        <div class="chat-box" id="chat-box">
+            <div class="welcome-message">
+                <h2>Welcome to Gemini AI!</h2>
+                <p>Start a conversation by typing a message below or upload an image, document, or audio file.</p>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="avatar">
+                <span>AI</span>
+            </div>
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+                
+        <div class="input-container">
+            <!-- File Upload Section -->
+            <div class="file-upload-section" id="file-upload-section">
+                <div class="file-upload-buttons">
+                    <label for="image-upload" class="file-upload-btn image-btn">
+                        <span>📷</span>
+                        <span>Image</span>
+                    </label>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    
+                    <label for="document-upload" class="file-upload-btn document-btn">
+                        <span>📄</span>
+                        <span>Document</span>
+                    </label>
+                    <input type="file" id="document-upload" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+                    
+                    <label for="audio-upload" class="file-upload-btn audio-btn">
+                        <span>🎵</span>
+                        <span>Audio</span>
+                    </label>
+                    <input type="file" id="audio-upload" accept="audio/*" style="display: none;">
+                </div>
+            </div>
+
+            <!-- File Preview Section -->
+            <div class="file-preview" id="file-preview" style="display: none;">
+                <div class="file-info">
+                    <span class="file-name" id="file-name"></span>
+                    <button class="remove-file-btn" id="remove-file-btn">✕</button>
+                </div>
+                <div class="file-content" id="file-content"></div>
+            </div>
+
+            <!-- Chat Form -->
+            <form class="input-form" id="chat-form">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" placeholder="Type your message or upload a file..." autocomplete="off">
+                </div>
+                <button type="submit" class="send-button" id="send-button">
+                    <span>➤</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
